@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://vjn67liu403p"
+path="res://.godot/imported/starheart.aseprite-6ba053f8f4bbd92d42b825f140021cc6.res"
+
+[deps]
+
+source_file="res://art/starheart.aseprite"
+dest_files=["res://.godot/imported/starheart.aseprite-6ba053f8f4bbd92d42b825f140021cc6.res"]
+
+[params]
+

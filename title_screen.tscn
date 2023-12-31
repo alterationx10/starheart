@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhfov3tyqihyx"]
+
+[ext_resource type="Texture2D" uid="uid://cu03emtmt6012" path="res://art/starheart.png" id="1_2t7m2"]
+[ext_resource type="Script" path="res://title_screen.gd" id="1_e64g3"]
+
+[node name="title_screen" type="CanvasLayer"]
+script = ExtResource("1_e64g3")
+
+[node name="Space" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="TextureRect" parent="."]
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -60.0
+offset_right = 320.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2t7m2")

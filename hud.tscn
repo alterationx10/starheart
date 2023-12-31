@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://iktcrbo2qo4w"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_tw26n"]
+[ext_resource type="Texture2D" uid="uid://b7h31j8fml7na" path="res://art/heart.png" id="2_nhpjg"]
+
+[sub_resource type="Animation" id="Animation_pojnt"]
+resource_name = "pulse"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_diab3"]
+_data = {
+"pulse": SubResource("Animation_pojnt")
+}
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_tw26n")
+
+[node name="BPMTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="PulseAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_diab3")
+}
+
+[node name="Heart" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 32.0
+offset_bottom = 32.0
+pivot_offset = Vector2(8, 8)
+texture = ExtResource("2_nhpjg")
+
+[connection signal="timeout" from="BPMTimer" to="." method="_on_bpm_timer_timeout"]

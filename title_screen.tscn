@@ -17,7 +17,6 @@ size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 
 [node name="Title" type="TextureRect" parent="."]
-z_index = 5
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,3 +29,32 @@ offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_2t7m2")
+
+[node name="MIDIDevicesLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.35625
+anchor_top = 0.694444
+anchor_right = 0.64375
+anchor_bottom = 0.758333
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "No MIDI Devices Found!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MIDIScanButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -31.0
+offset_right = 87.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Scan for MIDI Devices"
+
+[connection signal="pressed" from="MIDIScanButton" to="." method="_on_midi_scan_button_pressed"]

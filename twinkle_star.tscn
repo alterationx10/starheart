@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cb65rgtc7euu4"]
+[gd_scene load_steps=5 format=3 uid="uid://cb65rgtc7euu4"]
 
 [ext_resource type="SpriteFrames" uid="uid://ctdp47wgdbw7h" path="res://art/twinkle_star.res" id="1_dfyk7"]
 [ext_resource type="Script" path="res://twinkle_star.gd" id="1_tdejp"]
+[ext_resource type="Shader" path="res://twinkle_star.gdshader" id="2_203nv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2sc2"]
+shader = ExtResource("2_203nv")
 
 [node name="TwinkleStar" type="Node2D"]
 script = ExtResource("1_tdejp")
 
 [node name="TwinkleStar" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_b2sc2")
 sprite_frames = ExtResource("1_dfyk7")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",

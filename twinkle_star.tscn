@@ -6,6 +6,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b2sc2"]
 shader = ExtResource("2_203nv")
+shader_parameter/white = Color(1, 1, 1, 1)
 
 [node name="TwinkleStar" type="Node2D"]
 script = ExtResource("1_tdejp")

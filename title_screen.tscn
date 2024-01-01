@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhfov3tyqihyx"]
+[gd_scene load_steps=4 format=3 uid="uid://bhfov3tyqihyx"]
 
 [ext_resource type="Texture2D" uid="uid://cu03emtmt6012" path="res://art/starheart.png" id="1_2t7m2"]
 [ext_resource type="Script" path="res://title_screen.gd" id="1_e64g3"]
+[ext_resource type="FontFile" path="res://fonts/connection_ii/ConnectionII.tres" id="3_3tkai"]
 
 [node name="title_screen" type="CanvasLayer"]
 script = ExtResource("1_e64g3")
@@ -40,6 +41,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_3tkai")
 text = "No MIDI Devices Found!"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -55,6 +57,7 @@ offset_top = -31.0
 offset_right = 87.5
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_3tkai")
 text = "Scan for MIDI Devices"
 
 [connection signal="pressed" from="MIDIScanButton" to="." method="_on_midi_scan_button_pressed"]
